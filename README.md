@@ -4,7 +4,7 @@ Options-implied earnings moves and implied-vs-actual history for US stocks, from
 [EarningsWatcher](https://earnings-watcher.com) free API. No key needed.
 
 ```bash
-pip install earningswatcher
+pip install git+https://github.com/earnings-watcher/earningswatcher-python
 ```
 
 ```python
@@ -29,7 +29,7 @@ Live implied moves refresh daily while a report is upcoming.
 **Attribution.** Free to use with a credit and a link to EarningsWatcher
 (the `cite_as` field in every response has the exact source URL). Education only — not investment advice.
 
-**More.** The full open dataset (every report, CSV): see the EarningsWatcher dataset on GitHub / Hugging Face.
+**More.** The full open dataset (every report, CSV): https://github.com/earnings-watcher/earnings-implied-moves
 IV rush readings, post-earnings drift scores and the simulator are part of the
 [membership](https://earnings-watcher.com/pricing).
 

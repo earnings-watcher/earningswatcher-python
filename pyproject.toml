@@ -20,6 +20,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://earnings-watcher.com"
+Repository = "https://github.com/earnings-watcher/earningswatcher-python"
 Documentation = "https://earnings-watcher.com/wiki/free-implied-move-api"
 Dataset = "https://earnings-watcher.com/wiki/implied-moves"
 
