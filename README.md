@@ -22,7 +22,7 @@ print(len(symbols()))     # symbols covered
 
 ## What is free here, and what members get
 
-This package reads the free part of EarningsWatcher: each stock's implied move for its next report, its past implied-vs-actual record, and a beat rate. Members get what sits behind it: the IV Rush Radar (how option prices build into the print, live), DriftLab (whether the move continues or fades, scored from every past release) and a simulator that prices your exact position against ten years of real reactions. Plans: https://earnings-watcher.com/pricing
+This package reads the free part of EarningsWatcher: each stock's implied move for its next report, its past implied-vs-actual record, and a beat rate. Members get the platform built on top of it: the full earnings calendar with live implied moves, the IV Rush Radar, a scanner with alerts, the Moves Analyser, a simulator and backtester that price your exact position against ten years of real reactions, DriftLab for what happens after the report, sympathy plays, paper trading, a journal, a live trade feed — and the MCP connector, which puts all of it inside ChatGPT, Claude or Cursor. API access, daily livestreams and a private Discord come with every plan. Plans: https://earnings-watcher.com/pricing
 
 **What the numbers are.** The implied move is the earnings-day move the options market prices in,
 from the at-the-money straddle at the last close before the report
