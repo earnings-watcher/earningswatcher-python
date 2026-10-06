@@ -1,0 +1,36 @@
+# earningswatcher
+
+Options-implied earnings moves and implied-vs-actual history for US stocks, from the
+[EarningsWatcher](https://earnings-watcher.com) free API. No key needed.
+
+```bash
+pip install earningswatcher
+```
+
+```python
+from earningswatcher import implied_move, history, beat_rate, symbols
+
+jpm = implied_move("JPM")
+print(jpm["next_date"], jpm["implied_live_pct"])   # e.g. 2026-10-13, 4.1  -> options price a ±4.1% move
+
+for r in history("JPM")[-3:]:
+    print(r["date"], r["implied_pct"], r["close_pct"], r["peak_pct"])
+
+print(beat_rate("JPM"))   # share of reports where the peak move beat the implied move
+print(len(symbols()))     # symbols covered
+```
+
+**What the numbers are.** The implied move is the earnings-day move the options market prices in,
+from the at-the-money straddle at the last close before the report
+([how it is calculated](https://earnings-watcher.com/wiki/how-to-calculate-implied-move)).
+`close_pct` is the close-to-close move on the reaction day, `peak_pct` the largest intraday move.
+Live implied moves refresh daily while a report is upcoming.
+
+**Attribution.** Free to use with a credit and a link to EarningsWatcher
+(the `cite_as` field in every response has the exact source URL). Education only — not investment advice.
+
+**More.** The full open dataset (every report, CSV): see the EarningsWatcher dataset on GitHub / Hugging Face.
+IV rush readings, post-earnings drift scores and the simulator are part of the
+[membership](https://earnings-watcher.com/pricing).
+
+MIT licence for this package; data licence CC BY 4.0.

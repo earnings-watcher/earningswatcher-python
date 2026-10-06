@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "earningswatcher"
+version = "0.1.0"
+description = "Options-implied earnings moves and 10-year implied-vs-actual history for US stocks, from EarningsWatcher's free API."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "EarningsWatcher", email = "support@earnings-watcher.com" }]
+keywords = ["earnings", "implied move", "options", "expected move", "iv crush", "earnings calendar"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.urls]
+Homepage = "https://earnings-watcher.com"
+Documentation = "https://earnings-watcher.com/wiki/free-implied-move-api"
+Dataset = "https://earnings-watcher.com/wiki/implied-moves"
+
+[tool.setuptools]
+py-modules = ["earningswatcher"]
